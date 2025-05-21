@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom media query for main layout responsiveness -->
+  <style>
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="p-4">
+  <!-- Header -->
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+  </header>
+
+  <!-- Main layout using Grid -->
+  <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+    <!-- Flexbox content section -->
+    <section class="lg:col-span-2 flex">
+      <div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+      <div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="bg-green-200 p-4">
+      Sidebar
+    </aside>
+  </main>
+
+  <!-- Responsive Image Gallery Section -->
+  <section class="mt-8">
+    <h2 class="text-2xl font-semibold mb-4">Image Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://via.placeholder.com/300" alt="Gallery 1" class="w-full h-auto rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300" alt="Gallery 2" class="w-full h-auto rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300" alt="Gallery 3" class="w-full h-auto rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300" alt="Gallery 4" class="w-full h-auto rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300" alt="Gallery 5" class="w-full h-auto rounded-lg shadow-md" />
+      <img src="https://via.placeholder.com/300" alt="Gallery 6" class="w-full h-auto rounded-lg shadow-md" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-4 mt-8">
+    <p>&copy; 2024 John Doe's Blog</p>
+  </footer>
+</body>
+</html>
+
+
+| Section         | Tailwind Classes Used                                                                                                                    |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Gallery Wrapper | `grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4` — makes it 1 column on small screens, 2 on small+ (≥640px), 3 on medium+ (≥768px) |
+| Image Styling   | `w-full h-auto rounded-lg shadow-md` — ensures images are responsive and styled nicely                                                   |
+| Layout Spacing  | `mt-8` for spacing above gallery, `mb-4` for header spacing                                                                              |

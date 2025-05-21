@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Navigation Bar</title>
+  <link href="./output.css" rel="stylesheet">
+
+  <!-- Responsive adjustment using custom CSS -->
+  <style>
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body class="p-4">
+  <header class="mb-4">
+    <h1 class="text-3xl font-bold">Flexbox Navigation Bar</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="flex space-x-5 justify-center bg-gray-300 text-white p-4">
+    <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Home</a>
+    <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">About</a>
+    <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Services</a>
+    <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Contact</a>
+  </nav>
+</body>
+</html>
+
+
+| Element    | Classes Applied                                            | Description                                                      |
+| ---------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| `<body>`   | `p-4`                                                      | Adds padding around the whole page                               |
+| `<header>` | `mb-4`                                                     | Bottom margin after header                                       |
+| `<h1>`     | `text-3xl font-bold`                                       | Large bold title                                                 |
+| `<nav>`    | `flex space-x-5 justify-center bg-gray-300 text-white p-4` | Flex layout, spaced links, centered content, background, padding |
+| `<a>`      | `px-2 text-xl hover:bg-gray-500 p-2 rounded-lg`            | Padding, text size, hover effect, rounded corners                |

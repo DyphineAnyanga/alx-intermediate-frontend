@@ -1,0 +1,15 @@
+/* Tailwind base styles */
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+/* ... */
+
+/* Tailwind utility class */
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+/* ... many more utilities */
